@@ -15,7 +15,6 @@ namespace MohawkGame2D
         Color Drawcolor = Color.Blue;
         float brushsize = 13;
         Color pink = new Color(250,150,150);
-        int currcolor = 1;
         int colorpickerpos = 900;
         Color[] colarray = [Color.Black,Color.Blue,Color.Green,Color.Yellow];
         public void Setup()
@@ -42,7 +41,6 @@ namespace MohawkGame2D
             {
                 Draw.LineColor = Color.Black;
                 Draw.FillColor = colarray[i];
-                currcolor += 1;
                 Draw.Square(20, colorpickerpos, 80);
                 colorpickerpos -= 100;
             }
@@ -88,10 +86,10 @@ namespace MohawkGame2D
                 // draw
                 if (mousex > 150)
                 {
+
                 Draw.LineColor = Drawcolor;
                 Draw.FillColor = Drawcolor;
-
-                Draw.PolyLine(mousex, mousey);
+                    Draw.Circle(mousex, mousey,brushsize);
                 }
 
 
