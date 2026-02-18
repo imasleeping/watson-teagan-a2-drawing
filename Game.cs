@@ -79,6 +79,7 @@ namespace MohawkGame2D
                     Draw.LineColor = Color.Black;
                     Draw.Circle( 60,mousey, mousey / 18);
                 }
+                //erase selector
                 if (mousey >= 50 && mousey <= 150 && mousex <= 100)
                 {
                     Drawcolor = Color.White;
